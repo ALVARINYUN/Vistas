@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MultiCompany - Ofertas del Día</title>
+  <link rel="stylesheet" href="producto.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 4L4 8V16C4 17.1046 4.89543 18 6 18H18C19.1046 18 20 17.1046 20 16V8L12 4Z" stroke="#6d28d9" stroke-width="2"/>
+          <path d="M12 14V18" stroke="#6d28d9" stroke-width="2"/>
+          <path d="M8 14H16" stroke="#6d28d9" stroke-width="2"/>
+        </svg>
+        <span>MultiCompany</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Categorías</a></li>
+          <li><a href="#">Ofertas</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Ofertas del Día</h1>
+    <p>Descuentos exclusivos en electrónica, moda, hogar y más.</p>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Filtros -->
+    <aside class="filters">
+      <div class="filter-group">
+        <h3 class="filter-title">Categorías</h3>
+        <ul class="filter-list">
+          <li><a href="#" class="filter-link">Electrónica</a></li>
+          <li><a href="#" class="filter-link">Ropa y Accesorios</a></li>
+          <li><a href="#" class="filter-link">Hogar y Cocina</a></li>
+          <li><a href="#" class="filter-link">Deportes</a></li>
+          <li><a href="#" class="filter-link">Juguetes</a></li>
+          <li><a href="#" class="filter-link">Libros</a></li>
+        </ul>
+      </div>
+
+      <div class="filter-group">
+        <h3 class="filter-title">Precio</h3>
+        <ul class="filter-list">
+          <li><a href="#" class="filter-link">Menos de $50.000</a></li>
+          <li><a href="#" class="filter-link">$50.000 - $100.000</a></li>
+          <li><a href="#" class="filter-link">$100.000 - $200.000</a></li>
+          <li><a href="#" class="filter-link">Más de $200.000</a></li>
+        </ul>
+      </div>
+
+      <div class="filter-group">
+        <h3 class="filter-title">Marca</h3>
+        <ul class="filter-list">
+          <li><a href="#" class="filter-link">Samsung</a></li>
+          <li><a href="#" class="filter-link">Apple</a></li>
+          <li><a href="#" class="filter-link">Xiaomi</a></li>
+          <li><a href="#" class="filter-link">LG</a></li>
+          <li><a href="#" class="filter-link">Sony</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Productos -->
+    <section class="products">
+      <div class="products-header">
+        <h2 class="products-title">1.776 productos</h2>
+        <div class="sort">
+          <strong>Ordenar por:</strong>
+          <select class="sort-select">
+            <option>Más relevantes</option>
+            <option>Precio: bajo a alto</option>
+            <option>Precio: alto a bajo</option>
+            <option>Nuevo primero</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="products-grid">
+        <!-- Producto 1 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Smartphone" class="product-img" onerror="this.src='img/no-image.png';">
+            <div class="offer-badge">OFERTA DEL DÍA</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Smartphone Pro X - 128GB - Negro</h3>
+            <div class="product-rating">
+              <span class="rating-stars">★★★★★</span>
+              <span class="rating-count">(1.245)</span>
+            </div>
+            <div class="product-price">$699.900</div>
+            <div class="product-original-price">$999.900</div>
+            <div class="product-discount">-30%</div>
+            <div class="product-shipping">Envío gratis</div>
+          </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1585386959984-a41552a4f26a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Laptop" class="product-img" onerror="this.src='img/no-image.png';">
+            <div class="offer-badge">OFERTA DEL DÍA</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Laptop Ultra Slim - 16GB RAM - 512GB SSD</h3>
+            <div class="product-rating">
+              <span class="rating-stars">★★★★☆</span>
+              <span class="rating-count">(2.145)</span>
+            </div>
+            <div class="product-price">$2.199.900</div>
+            <div class="product-original-price">$2.800.000</div>
+            <div class="product-discount">-21%</div>
+            <div class="product-shipping">Envío gratis</div>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Audífonos" class="product-img" onerror="this.src='img/no-image.png';">
+            <div class="offer-badge">OFERTA DEL DÍA</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Audífonos Inalámbricos con Cancelación de Ruido</h3>
+            <div class="product-rating">
+              <span class="rating-stars">★★★★☆</span>
+              <span class="rating-count">(1.845)</span>
+            </div>
+            <div class="product-price">$189.900</div>
+            <div class="product-original-price">$249.900</div>
+            <div class="product-discount">-24%</div>
+            <div class="product-shipping">Envío gratis</div>
+          </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="img/no-image.png" alt="Camisa" class="product-img" onerror="this.src='img/no-image.png';">
+            <div class="offer-badge">OFERTA DEL DÍA</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Camisa Clásica de Algodón - Azul Marino</h3>
+            <div class="product-rating">
+              <span class="rating-stars">★★★★☆</span>
+              <span class="rating-count">(845)</span>
+            </div>
+            <div class="product-price">$59.900</div>
+            <div class="product-original-price">$75.000</div>
+            <div class="product-discount">-20%</div>
+            <div class="product-shipping">Envío desde $5.000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 MultiCompany. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
