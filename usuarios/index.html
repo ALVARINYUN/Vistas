@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Usuarios - Panel Admin</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- Tu CSS base -->
+  <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="user-info">
+      <div class="user-avatar">A</div>
+      <span>Welcome Back!</span>
+    </div>
+    <nav>
+      <ul style="display: flex; gap: 1rem;">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#" class="text-danger">Salir</a></li>
+      </ul>
+    </nav>
+  </header>
+    <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo"><a href="/paneladmin/index.html">AdminPanel</a></div>
+    <div class="menu-section">
+      <h3 class="menu-title">General</h3>
+      <ul class="menu-list">
+        <li><a href="#" class="active"><i class="fas fa-th-large"></i> Dashboard</a></li>
+        <li><a href="#"><i class="fas fa-chart-line"></i> Informes</a></li>
+        <li><a href="#"><i class="fas fa-calendar"></i> Calendario</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Mensajes</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <h3 class="menu-title">Gestión</h3>
+      <ul class="menu-list">
+        <li><a href="#"><i class="fas fa-box"></i> Productos</a></li>
+        <li><a href="#"><i class="fas fa-tags"></i> Categorías</a></li>
+        <li><a href="/usuarios/index.html"><i class="fas fa-users"></i> Usuarios</a></li>
+        <li><a href="/misCompras/index.html"><i class="fas fa-shopping-cart"></i> Pedidos</a></li>
+        <li><a href="/ventas/index.html"><i class="fas fa-dollar-sign"></i> Ventas</a></li>
+        <li><a href="/sucursales/index.html"><i class="fas fa-store"></i> Sucursales</a></li>
+        <li><a href="#"><i class="fas fa-file-invoice"></i> Solicitudes</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <ul class="menu-list">
+        <li><a href="#"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+      </ul>
+    </div>
+  </aside>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="header">
+      <h2 class="card-title">Gestión de Usuarios</h2>
+      <button class="btn-primary">+ Nuevo Usuario</button>
+    </div>
+
+    <!-- Búsqueda y Filtros -->
+    <div class="card">
+      <div class="search-filter">
+        <input type="text" placeholder="Buscar por nombre, email o documento..." class="search-input" />
+        <select class="search-input">
+          <option value="">Todos los roles</option>
+          <option value="admin">Administrador</option>
+          <option value="client">Cliente</option>
+          <option value="employee">Empleado</option>
+        </select>
+        <select class="search-input">
+          <option value="">Todos los estados</option>
+          <option value="active">Activo</option>
+          <option value="inactive">Inactivo</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Tabla de Usuarios -->
+    <div class="card">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Usuario</th>
+            <th>Email</th>
+            <th>Documento</th>
+            <th>Rol</th>
+            <th>Estado</th>
+            <th>Fecha Registro</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 36px; height: 36px; background: #6d28d9; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">
+                  AM
+                </div>
+                <span>Alvaro Yunda</span>
+              </div>
+            </td>
+            <td>yundaalvaro081@gmail.com</td>
+            <td>CC 123.456.789</td>
+            <td><span class="role-badge">Admin</span></td>
+            <td><span class="status-badge status-active">Activo</span></td>
+            <td>01/03/2024</td>
+            <td>
+              <button class="action-btn">Ver</button>
+              <button class="action-btn">Editar</button>
+              <button class="action-btn" style="color: #ef4444;">Desactivar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 36px; height: 36px; background: #8b5cf6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">
+                  ML
+                </div>
+                <span>María López</span>
+              </div>
+            </td>
+            <td>maria@cliente.com</td>
+            <td>CC 987.654.321</td>
+            <td><span class="role-badge">Cliente</span></td>
+            <td><span class="status-badge status-active">Activo</span></td>
+            <td>15/03/2024</td>
+            <td>
+              <button class="action-btn">Ver</button>
+              <button class="action-btn">Editar</button>
+              <button class="action-btn" style="color: #ef4444;">Desactivar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 36px; height: 36px; background: #a78bfa; color: #1e293b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">
+                  CR
+                </div>
+                <span>Carlos Ruiz</span>
+              </div>
+            </td>
+            <td>carlos@empleado.com</td>
+            <td>TI 456.123.789</td>
+            <td><span class="role-badge">Empleado</span></td>
+            <td><span class="status-badge status-inactive">Inactivo</span></td>
+            <td>20/03/2024</td>
+            <td>
+              <button class="action-btn">Ver</button>
+              <button class="action-btn">Editar</button>
+              <button class="action-btn" style="color: #10b981;">Activar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>
