@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ventas - Panel Admin</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">AdminPanel</div>
+    <div class="menu-section">
+      <h3 class="menu-title">General</h3>
+      <ul class="menu-list">
+        <li><a href="#" class="active"><i class="fas fa-th-large"></i> Dashboard</a></li>
+        <li><a href="#"><i class="fas fa-chart-line"></i> Informes</a></li>
+        <li><a href="#"><i class="fas fa-calendar"></i> Calendario</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Mensajes</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <h3 class="menu-title">Gestión</h3>
+      <ul class="menu-list">
+        <li><a href="#"><i class="fas fa-box"></i> Productos</a></li>
+        <li><a href="#"><i class="fas fa-tags"></i> Categorías</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Usuarios</a></li>
+        <li><a href="#"><i class="fas fa-shopping-cart"></i> Pedidos</a></li>
+        <li><a href="#"><i class="fas fa-dollar-sign"></i> Ventas</a></li>
+        <li><a href="/sucursales/index.html"><i class="fas fa-store"></i> Sucursales</a></li>
+        <li><a href="#"><i class="fas fa-file-invoice"></i> Solicitudes</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <ul class="menu-list">
+        <li><a href="#"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="welcome">Ventas</h1>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="Perfil">
+        <div>
+          <div class="user-name">Juan Pérez</div>
+          <div class="role">Administrador</div>
+        </div>
+        <i class="fas fa-bell"></i>
+      </div>
+    </div>
+
+    <!-- Código de autorización -->
+    <div class="alert-info">
+      <i class="fas fa-info-circle"></i>
+      <strong>Código de autorización para hoy:</strong>
+      <span style="font-weight: 600;">98B98760</span>
+      <a href="#" class="btn-primary">Detalle de colectas</a>
+    </div>
+
+    <!-- Resumen de envíos -->
+    <div class="sales-summary">
+      <div class="summary-card">
+        <div class="summary-title">Envíos de hoy</div>
+        <div class="summary-value">448</div>
+        <div class="summary-subtitle">Próximos días: 127</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">En tránsito</div>
+        <div class="summary-value">138</div>
+        <div class="summary-subtitle">Finalizadas: 3</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Por enviar</div>
+        <div class="summary-value">84</div>
+        <div class="summary-subtitle">Reprogramadas: 7</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Por entregar</div>
+        <div class="summary-value">9</div>
+        <div class="summary-subtitle">Con reclamo: 2</div>
+      </div>
+    </div>
+
+    <!-- Acciones y filtros -->
+    <div class="actions-bar">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar por nombre, SKU o #" />
+      </div>
+      <div class="filter-dropdown">
+        <i class="fas fa-calendar"></i>
+        <select>
+          <option>Seleccionar fecha</option>
+          <option>Hoy</option>
+          <option>Ayer</option>
+          <option>Esta semana</option>
+        </select>
+      </div>
+      <div class="filter-dropdown">
+        <i class="fas fa-filter"></i>
+        <select>
+          <option>Filtrar y ordenar</option>
+          <option>Envíos de hoy</option>
+          <option>Próximos días</option>
+        </select>
+      </div>
+      <button class="btn-primary">Ver más</button>
+    </div>
+
+    <!-- Tabla de ventas -->
+    <div class="table-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Estado</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="order-id">#1004</span></td>
+            <td>María López</td>
+            <td>Fluimucil Mucosidad & Flema</td>
+            <td><span class="order-status programmed">Programada</span></td>
+            <td>05/04/2024</td>
+            <td class="actions">
+              <button class="action-btn"><i class="fas fa-eye"></i> Ver</button>
+              <button class="action-btn"><i class="fas fa-print"></i> Imprimir</button>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="order-id">#1003</span></td>
+            <td>Carlos Ruiz</td>
+            <td>Paracetamol 500mg</td>
+            <td><span class="order-status in-transit">En tránsito</span></td>
+            <td>04/04/2024</td>
+            <td class="actions">
+              <button class="action-btn"><i class="fas fa-eye"></i> Ver</button>
+              <button class="action-btn"><i class="fas fa-print"></i> Imprimir</button>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="order-id">#1002</span></td>
+            <td>Luisa Fernández</td>
+            <td>Ibuprofeno 400mg</td>
+            <td><span class="order-status to-send">Por enviar</span></td>
+            <td>03/04/2024</td>
+            <td class="actions">
+              <button class="action-btn"><i class="fas fa-eye"></i> Ver</button>
+              <button class="action-btn"><i class="fas fa-print"></i> Imprimir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>
