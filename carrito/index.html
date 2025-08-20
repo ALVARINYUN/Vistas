@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de Compras - MiTienda</title>
+  <link href="styles.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#6d28d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="#6d28d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="#6d28d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        MiTienda
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Carrito</a></li>
+          <li><a href="#">Perfil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="main">
+
+    <!-- Sidebar -->
+    <aside class="filters">
+      <div class="filter-group">
+        <h3 class="filter-title">Multi-Company</h3>
+        <ul class="filter-list">
+          <li><a href="#"><i class="fas fa-shopping-bag"></i> Compras</a></li>
+          <li><a href="#"><i class="fas fa-tags"></i> Ventas</a></li>
+          <li><a href="#"><i class="fas fa-chart-line"></i> Marketing</a></li>
+          <li><a href="#"><i class="fas fa-star"></i> Suscripciones</a></li>
+          <li><a href="#"><i class="fas fa-file-invoice"></i> Facturación</a></li>
+          <li><a href="#"><i class="fas fa-user"></i> Mi perfil</a></li>
+          <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <section class="products">
+      <div class="products-header">
+        <h2 class="products-title">Tu Carrito</h2>
+      </div>
+
+      <!-- Productos en el carrito -->
+      <div class="card">
+        <div class="card-header">
+          <div class="cart-header">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Productos</span>
+            <span style="color: #10b981; font-weight: 600;">⚡ FULL</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="cart-item">
+            <img src="https://via.placeholder.com/60x60?text=Fluimucil" alt="Fluimucil" />
+            <div class="cart-item-info">
+              <div class="cart-item-title">Fluimucil Mucosidad & Flema</div>
+              <div class="cart-item-price">$98.219 por unidad</div>
+            </div>
+            <div class="quantity-controls">
+              <button class="quantity-btn">−</button>
+              <input type="number" class="quantity-input" value="2" min="1" />
+              <button class="quantity-btn">+</button>
+            </div>
+            <div class="cart-item-price">$196.438</div>
+            <a href="#" class="remove-btn">Eliminar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resumen de compra -->
+      <div class="summary-box">
+        <div class="summary-title">Resumen de compra</div>
+        <div class="total-row">
+          <span>Total</span>
+          <span>$196.438</span>
+        </div>
+        <button class="btn-primary">Continuar compra</button>
+      </div>
+
+      <!-- Más información -->
+      <div class="mt-3 text-center">
+        <button class="info-toggle">
+          Más información <i class="fas fa-chevron-up"></i>
+        </button>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 MiTienda. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

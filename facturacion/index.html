@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facturación - MiTienda</title>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#6d28d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="#6d28d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="#6d28d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        MiTienda
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Carrito</a></li>
+          <li><a href="#">Perfil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="main">
+
+    <!-- Sidebar izquierdo -->
+    <aside class="filters">
+  <div class="filter-group">
+    <h3 class="filter-title">Mi cuenta</h3>
+    <ul class="filter-list">
+      <li><a href="#"><i class="fas fa-shopping-bag"></i> Compras</a></li>
+      <li><a href="#"><i class="fas fa-tags"></i> Ventas</a></li>
+      <li><a href="#"><i class="fas fa-chart-line"></i> Marketing</a></li>
+      <li><a href="#"><i class="fas fa-star"></i> Suscripciones</a></li>
+      <li><a href="#" class="active"><i class="fas fa-file-invoice"></i> Facturación</a></li>
+      <li><a href="#"><i class="fas fa-user"></i> Mi perfil</a></li>
+      <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+    </ul>
+  </div>
+</aside>
+
+    <!-- Contenido central -->
+    <section class="products">
+      <div class="products-header">
+        <h2 class="products-title">Facturación</h2>
+      </div>
+
+      <!-- Estado de pagos -->
+      <div class="card">
+        <div class="card-header">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-check-circle" style="color: #10b981;"></i>
+            <strong>¡Estás al día con tus pagos!</strong>
+          </div>
+        </div>
+        <div class="card-body">
+          <button class="btn-primary" style="width: 100%; margin-bottom: 1rem;">
+            Adherirme al débito automático
+          </button>
+          <p style="color: #64748b; font-size: 0.9rem;">
+            Tu mes en curso no registra cargos. Cuando generes tu primer cargo, podrás acceder al detalle desde aquí.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tablas de movimientos -->
+      <div class="card">
+        <div class="card-header">
+          <div class="tab-nav">
+            <div class="tab-item active">Últimos cargos y anulaciones</div>
+            <div class="tab-item">Últimos pagos</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="empty-state">
+            <img src="https://via.placeholder.com/60x60?text=🔍" alt="Sin movimientos" class="empty-icon" />
+            <h4>No hay movimientos por aquí</h4>
+            <p>No tienes cargos ni anulaciones para revisar.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Sidebar derecho -->
+    <aside class="products-right">
+      <div class="card">
+        <div class="card-header">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-file-alt"></i>
+            <strong>Reportes de tus cobros y extractos de cuenta</strong>
+          </div>
+        </div>
+        <div class="card-body">
+          <p style="font-size: 0.9rem; color: #64748b;">
+            Usa los reportes para conciliar las diferentes operaciones de tu cuenta.
+          </p>
+          <a href="#" class="btn-primary" style="width: 100%;">Ver reportes</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-calendar"></i>
+            <strong>Impuestos</strong>
+          </div>
+        </div>
+        <div class="card-body">
+          <p style="font-size: 0.9rem; color: #64748b;">
+            Revisa cómo y por qué te aplicamos percepciones y retenciones.
+          </p>
+          <a href="#" class="btn-primary" style="width: 100%;">Ver impuestos</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <strong>Datos para tu factura</strong>
+        </div>
+        <div class="card-body">
+          <div style="margin-bottom: 1rem;">
+            <small style="color: #64748b;">Nombre y apellido</small>
+            <p style="margin-top: 0.5rem;"><strong>Alvaro</strong></p>
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <small style="color: #64748b;">Documento</small>
+            <p style="margin-top: 0.5rem;">No informado</p>
+          </div>
+          <a href="#" class="btn-primary" style="width: 100%;">Editar Mis datos</a>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 MiTienda. Todos los derechos reservados.</p>
+  </footer>
+    
+</body>
+</html>
