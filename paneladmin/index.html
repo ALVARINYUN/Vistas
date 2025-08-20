@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel de Administración</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Archivo CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">AdminPanel</div>
+
+    <div class="menu-section">
+      <h3 class="menu-title">General</h3>
+      <ul class="menu-list">
+        <li><a href="#" class="active"><i class="fas fa-th-large"></i> Dashboard</a></li>
+        <li><a href="#"><i class="fas fa-chart-line"></i> Informes</a></li>
+        <li><a href="#"><i class="fas fa-calendar"></i> Calendario</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Mensajes</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <h3 class="menu-title">Gestión</h3>
+      <ul class="menu-list">
+        <li><a href="#"><i class="fas fa-box"></i> Productos</a></li>
+        <li><a href="#"><i class="fas fa-tags"></i> Categorías</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Usuarios</a></li>
+        <li><a href="#"><i class="fas fa-shopping-cart"></i> Pedidos</a></li>
+        <li><a href="#"><i class="fas fa-store"></i> Sucursales</a></li>
+        <li><a href="#"><i class="fas fa-warehouse"></i> Almacenes</a></li>
+        <li><a href="#"><i class="fas fa-file-invoice"></i> Solicitudes</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <ul class="menu-list">
+        <li><a href="#"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="welcome">Hola, Juan Pérez</h1>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="Perfil">
+        <div>
+          <div class="user-name">Juan Pérez</div>
+          <div class="role">Administrador</div>
+        </div>
+        <i class="fas fa-bell"></i>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+      <div class="card">
+        <div class="card-title">Ventas Recientes</div>
+        <div class="card-value">$24,500</div>
+        <div class="card-trend"><i class="fas fa-arrow-up"></i> 12% más que el mes pasado</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Productos en Stock</div>
+        <div class="card-value">1,280</div>
+        <div class="card-trend"><i class="fas fa-arrow-right"></i> Estable</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Usuarios Activos</div>
+        <div class="card-value">876</div>
+        <div class="card-trend"><i class="fas fa-arrow-up"></i> +5%</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Pedidos Pendientes</div>
+        <div class="card-value">12</div>
+        <div class="card-trend down"><i class="fas fa-arrow-down"></i> Requieren atención</div>
+      </div>
+    </div>
+
+    <!-- Chart + List -->
+    <div class="main-grid">
+      <!-- Chart -->
+      <div class="chart-container">
+        <h2 class="section-title">Actividad de Ventas</h2>
+        <div class="chart">
+          <div class="bar" style="height: 60%"></div>
+          <div class="bar" style="height: 80%"></div>
+          <div class="bar" style="height: 100%"></div>
+          <div class="bar" style="height: 70%"></div>
+          <div class="bar" style="height: 90%"></div>
+        </div>
+      </div>
+
+      <!-- Orders Status -->
+      <div class="orders-status">
+        <h2 class="section-title">Estado de Pedidos</h2>
+        <ul>
+          <li>
+            <span><span class="dot dot-green"></span>Procesando</span>
+            <strong>8</strong>
+          </li>
+          <li>
+            <span><span class="dot dot-yellow"></span>Enviado</span>
+            <strong>15</strong>
+          </li>
+          <li>
+            <span><span class="dot dot-red"></span>Pendiente de pago</span>
+            <strong>3</strong>
+          </li>
+          <li>
+            <span><span class="dot dot-purple"></span>Entregado</span>
+            <strong>42</strong>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Top Products Table -->
+    <div class="chart-container">
+      <h2 class="section-title">Productos Más Vendidos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th>Ventas</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#101</td>
+            <td>iPhone 15</td>
+            <td>Electrónica</td>
+            <td>245</td>
+            <td><span class="status status-green">12</span></td>
+          </tr>
+          <tr>
+            <td>#205</td>
+            <td>Camisa Azul</td>
+            <td>Ropa</td>
+            <td>189</td>
+            <td><span class="status status-green">35</span></td>
+          </tr>
+          <tr>
+            <td>#302</td>
+            <td>Laptop Pro</td>
+            <td>Electrónica</td>
+            <td>98</td>
+            <td><span class="status status-red">5</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Explore Button -->
+    <div class="footer-action">
+      <a href="#" class="btn-explore">
+        <i class="fas fa-search"></i> Explorar
+      </a>
+    </div>
+  </main>
+</body>
+</html>
