@@ -1,0 +1,334 @@
+ 
+    /* Variables */
+    :root {
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --bg: #f8fafc;
+      --sidebar-bg: #ffffff;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --gray: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background-color: var(--sidebar-bg);
+      border-right: 1px solid var(--border);
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      overflow-y: auto;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .menu-section {
+      margin-bottom: 24px;
+    }
+
+    .menu-title {
+      font-size: 0.875rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 16px 0 8px 16px;
+    }
+
+    .menu-list {
+      list-style: none;
+    }
+
+    .menu-list li {
+      margin: 4px 0;
+    }
+
+    .menu-list a {
+      display: flex;
+      align-items: center;
+      padding: 10px 16px;
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .menu-list a:hover,
+    .menu-list a.active {
+      background-color: rgba(99, 102, 241, 0.1);
+      color: var(--primary);
+    }
+
+    .menu-list a i {
+      width: 24px;
+      text-align: center;
+      margin-right: 12px;
+      color: var(--gray);
+    }
+
+    .menu-list a.active i {
+      color: var(--primary);
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      margin-left: 260px;
+      padding: 32px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .welcome {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .user-info img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .user-name {
+      font-weight: 500;
+    }
+
+    .role {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    /* Cards Grid */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+
+    .card-value {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .card-trend {
+      display: flex;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--success);
+    }
+
+    .card-trend.down {
+      color: var(--danger);
+    }
+
+    .card-trend i {
+      margin-right: 4px;
+    }
+
+    /* Chart + List Layout */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .chart-container,
+    .orders-status {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .chart {
+      height: 200px;
+      background: linear-gradient(to right, #e0e7ff, #f3f4f6);
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    .bar {
+      width: 30px;
+      background-color: var(--primary-light);
+      border-radius: 4px 4px 0 0;
+      transition: height 0.3s ease;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 10px;
+      color: var(--text-light);
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td:first-child {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    /* Status Indicators */
+    .status {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      color: white;
+    }
+
+    .status-green {
+      background-color: var(--success);
+    }
+
+    .status-yellow {
+      background-color: var(--warning);
+    }
+
+    .status-red {
+      background-color: var(--danger);
+    }
+
+    /* Orders Status List */
+    .orders-status ul {
+      list-style: none;
+    }
+
+    .orders-status li {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .orders-status li:last-child {
+      border-bottom: none;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .dot-green {
+      background-color: var(--success);
+    }
+
+    .dot-yellow {
+      background-color: var(--warning);
+    }
+
+    .dot-red {
+      background-color: var(--danger);
+    }
+
+    .dot-purple {
+      background-color: var(--primary);
+    }
+
+    /* Button */
+    .btn-explore {
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.2s;
+    }
+
+    .btn-explore:hover {
+      background-color: var(--primary-light);
+    }
+
+    .footer-action {
+      text-align: right;
+      margin-top: 24px;
+    }
