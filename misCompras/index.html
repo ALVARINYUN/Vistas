@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis Pedidos - Tienda</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  </head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">AdminPanel</div>
+    <div class="menu-section">
+      <h3 class="menu-title">General</h3>
+      <ul class="menu-list">
+        <li><a href="#" class="active"><i class="fas fa-th-large"></i> Dashboard</a></li>
+        <li><a href="#"><i class="fas fa-chart-line"></i> Informes</a></li>
+        <li><a href="#"><i class="fas fa-calendar"></i> Calendario</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Mensajes</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <h3 class="menu-title">Gestión</h3>
+      <ul class="menu-list">
+        <li><a href="#"><i class="fas fa-box"></i> Productos</a></li>
+        <li><a href="#"><i class="fas fa-tags"></i> Categorías</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Usuarios</a></li>
+        <li><a href="/misCompras/index.html"><i class="fas fa-shopping-cart"></i> Pedidos</a></li>
+        <li><a href="/ventas/index.html"><i class="fas fa-dollar-sign"></i> Ventas</a></li>
+        <li><a href="/sucursales/index.html"><i class="fas fa-store"></i> Sucursales</a></li>
+        <li><a href="#"><i class="fas fa-file-invoice"></i> Solicitudes</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <ul class="menu-list">
+        <li><a href="#"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="page-header">
+      <h1 class="page-title">Mis pedidos realizados</h1>
+      <select class="sort-select">
+        <option>Ordenar por: Más recientes</option>
+        <option>Ordenar por: Más antiguos</option>
+        <option>Precio: de menor a mayor</option>
+        <option>Precio: de mayor a menor</option>
+      </select>
+    </div>
+
+    <!-- Filtros activos -->
+    <div class="filters-row">
+      <div class="filter-chip">📚 Libros Físicos <i class="fas fa-times"></i></div>
+      <div class="filter-chip">💳 0% interés <i class="fas fa-times"></i></div>
+      <div class="filter-chip">🚚 Envío gratis <i class="fas fa-times"></i></div>
+      <div class="filter-chip">🌎 Internacional <i class="fas fa-times"></i></div>
+    </div>
+
+    <!-- Lista de compras -->
+    <div class="order-grid">
+      <!-- Compra 1 -->
+      <div class="order-card">
+        <img src="https://via.placeholder.com/300x200?text=Libro+Revelando+Mis+Sentimientos" alt="Libro: Revelando Mis Sentimientos" class="order-image">
+        <div class="order-details">
+          <h3 class="order-title">Libro: Revelando Mis Sentimientos</h3>
+          <div class="order-price">$178.188</div>
+          <div class="order-info">3 cuotas de $59.396 con 0% interés</div>
+          <div class="order-info"><strong>Envío gratis</strong></div>
+          <div class="order-info">Compra internacional - Envío desde USA</div>
+          <div class="order-info">Entregado el 05/04/2024</div>
+          <div class="order-status status-delivered">✅ Entregado</div>
+        </div>
+      </div>
+
+      <!-- Compra 2 -->
+      <div class="order-card">
+        <img src="https://via.placeholder.com/300x200?text=Some+Like+It+Hot" alt="La Realización De Some Like It Hot" class="order-image">
+        <div class="order-details">
+          <h3 class="order-title">La Realización De Some Like It Hot</h3>
+          <div class="order-price">$184.550</div>
+          <div class="order-info">3 cuotas de $61.517 con 0% interés</div>
+          <div class="order-info"><strong>Envío gratis</strong></div>
+          <div class="order-info">Disponible en 17 días</div>
+          <div class="order-info">En tránsito desde Colombia</div>
+          <div class="order-status status-shipping">🚚 En tránsito</div>
+        </div>
+      </div>
+
+      <!-- Compra 3 -->
+      <div class="order-card">
+        <img src="https://via.placeholder.com/300x200?text=Los+Increíbles+2" alt="Los Increíbles 2: Mis Lecturas Disney" class="order-image">
+        <div class="order-details">
+          <h3 class="order-title">Los Increíbles 2: Mis Lecturas Disney</h3>
+          <div class="order-price">$120.000</div>
+          <div class="order-info">Pago único</div>
+          <div class="order-info">Retiro gratis en Bogotá D.C.</div>
+          <div class="order-info">Pendiente de confirmación</div>
+          <div class="order-status status-pending">⏳ Pendiente</div>
+        </div>
+      </div>
+
+      <!-- Compra 4 -->
+      <div class="order-card">
+        <img src="https://via.placeholder.com/300x200?text=Set+de+Pinturas" alt="Set de Pinturas y Pinceles" class="order-image">
+        <div class="order-details">
+          <h3 class="order-title">Set de Pinturas y Pinceles Premium</h3>
+          <div class="order-price">$85.000</div>
+          <div class="order-info">Pagado con Yape</div>
+          <div class="order-info">Envío estándar: $5.000</div>
+          <div class="order-info">Cancelado por el comprador</div>
+          <div class="order-status status-canceled">❌ Cancelado</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

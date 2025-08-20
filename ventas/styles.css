@@ -42,8 +42,9 @@
       z-index: 1000;
     }
 
-    .logo {
+    .logo a {
       font-size: 1.5rem;
+      text-decoration: none;
       font-weight: 700;
       color: var(--primary);
       margin-bottom: 32px;
