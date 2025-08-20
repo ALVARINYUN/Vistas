@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Perfil - Multi Empresa</title>
+  <!-- Tus estilos -->
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@4.5.0/inter.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#6d28d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="#6d28d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="#6d28d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Multi-Company
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Carrito</a></li>
+          <li><a href="#">Perfil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="main">
+    
+    <!-- Sidebar de Perfil -->
+    <aside class="filters">
+      <div class="filter-group">
+        <h3 class="filter-title">Mi cuenta</h3>
+        <ul class="filter-list">
+          <li><a href="#" class="filter-link"><i class="fas fa-user me-2"></i> Información personal</a></li>
+          <li><a href="#" class="filter-link"><i class="fas fa-building me-2"></i> Empresas</a></li>
+          <li><a href="#" class="filter-link"><i class="fas fa-credit-card me-2"></i> Tarjetas</a></li>
+          <li><a href="#" class="filter-link"><i class="fas fa-map-marker-alt me-2"></i> Direcciones</a></li>
+          <li><a href="#" class="filter-link"><i class="fas fa-shield-alt me-2"></i> Seguridad</a></li>
+          <li><a href="#" class="filter-link"><i class="fas fa-file-invoice me-2"></i> Facturación</a></li>
+          <li><a href="#" class="filter-link"><i class="fas fa-cog me-2"></i> Configuración</a></li>
+          <li><a href="#" class="filter-link text-danger"><i class="fas fa-sign-out-alt me-2"></i> Cerrar sesión</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <section class="products">
+      <div class="products-header">
+        <h2 class="products-title">Mi Perfil</h2>
+        <div class="sort">
+          <i class="fas fa-edit"></i>
+          <a href="#edit" class="filter-link">Editar perfil</a>
+        </div>
+      </div>
+
+      <!-- Información del Usuario -->
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-info">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+              <div style="width: 60px; height: 60px; background: #6d28d9; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
+                AL
+              </div>
+              <div>
+                <strong>Alvaro Yunda</strong><br/>
+                <small>yundaalvaro081@gmail.com</small>
+              </div>
+            </div>
+            <p><strong>Documento:</strong> CC 123.456.789</p>
+            <p><strong>Teléfono:</strong> +57 300 123 4567</p>
+            <p><strong>Dirección:</strong> Calle 123 #45-67, Bogotá</p>
+          </div>
+        </div>
+
+        <!-- Empresas asociadas -->
+        <div class="product-card">
+          <div class="product-info">
+            <h3 style="margin-bottom: 1rem; color: #1e293b;">Empresas asociadas</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+              <span style="background: #6d28d9; color: white; padding: 0.25rem 0.6rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">
+                Empresa A
+              </span>
+              <span style="background: #8b5cf6; color: white; padding: 0.25rem 0.6rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">
+                Empresa B
+              </span>
+              <span style="background: #a78bfa; color: #1e293b; padding: 0.25rem 0.6rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">
+                Empresa C
+              </span>
+            </div>
+            <p style="font-size: 0.9rem; color: #64748b;">
+              Estás vinculado a 3 empresas. Puedes cambiar de contexto en cualquier momento.
+            </p>
+          </div>
+        </div>
+
+        <!-- Secciones rápidas -->
+        <a href="#" class="product-card">
+          <div class="product-info">
+            <h3 class="product-title">Información personal</h3>
+            <p style="color: #64748b; font-size: 0.9rem; margin: 0.5rem 0;">Nombre, correo, documento, contacto.</p>
+            <i class="fas fa-exclamation-circle" style="color: #ef4444; margin-top: 0.5rem;"></i>
+            <small style="color: #ef4444; font-size: 0.85rem;">Actualiza tu información</small>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+          <div class="product-info">
+            <h3 class="product-title">Seguridad</h3>
+            <p style="color: #64748b; font-size: 0.9rem; margin: 0.5rem 0;">Contraseña, autenticación en dos pasos.</p>
+            <i class="fas fa-exclamation-circle" style="color: #ef4444; margin-top: 0.5rem;"></i>
+            <small style="color: #ef4444; font-size: 0.85rem;">Configura 2FA</small>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+          <div class="product-info">
+            <h3 class="product-title">Tarjetas guardadas</h3>
+            <p style="color: #64748b; font-size: 0.9rem; margin: 0.5rem 0;">Administra tus métodos de pago.</p>
+            <i class="fas fa-credit-card" style="color: #6d28d9; margin-top: 0.5rem;"></i>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+          <div class="product-info">
+            <h3 class="product-title">Direcciones</h3>
+            <p style="color: #64748b; font-size: 0.9rem; margin: 0.5rem 0;">Direcciones de entrega y facturación.</p>
+            <i class="fas fa-map-marker-alt" style="color: #10b981; margin-top: 0.5rem;"></i>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 MiTienda. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
