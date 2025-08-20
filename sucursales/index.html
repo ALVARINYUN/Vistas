@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sucursales y Almacenes</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+      <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">AdminPanel</div>
+    <div class="menu-section">
+      <h3 class="menu-title">General</h3>
+      <ul class="menu-list">
+        <li><a href="#" class="active"><i class="fas fa-th-large"></i> Dashboard</a></li>
+        <li><a href="#"><i class="fas fa-chart-line"></i> Informes</a></li>
+        <li><a href="#"><i class="fas fa-calendar"></i> Calendario</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Mensajes</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <h3 class="menu-title">Gestión</h3>
+      <ul class="menu-list">
+        <li><a href="#"><i class="fas fa-box"></i> Productos</a></li>
+        <li><a href="#"><i class="fas fa-tags"></i> Categorías</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Usuarios</a></li>
+        <li><a href="#"><i class="fas fa-shopping-cart"></i> Pedidos</a></li>
+        <li><a href="/sucursales/index.html"><i class="fas fa-store"></i> Sucursales</a></li>
+        <li><a href="#"><i class="fas fa-file-invoice"></i> Solicitudes</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <ul class="menu-list">
+        <li><a href="#"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+      </ul>
+    </div>
+  </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <h1>Sucursales y Almacenes</h1>
+        <div class="user-info">
+          👤 <strong>Juan Pérez</strong> • <span class="role">Administrador</span>
+        </div>
+      </header>
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="#">Inicio</a> / <span>Sucursales</span>
+      </nav>
+
+      <!-- Mapa (opcional) -->
+      <section class="map-section">
+        <div class="map-placeholder">
+          <i class="fas fa-map-marker-alt"></i> Mapa de Sucursales
+        </div>
+      </section>
+
+      <!-- Listado de Sucursales -->
+      <section class="branches-list">
+        <div class="section-header">
+          <h2>Sucursales Activas</h2>
+          <button class="btn-primary">+ Nueva Sucursal</button>
+        </div>
+
+        <div class="cards">
+          <div class="card" onclick="showDetail(1)">
+            <div class="card-icon"><i class="fas fa-store"></i></div>
+            <div class="card-info">
+              <h3>Sucursal Central</h3>
+              <p><i class="fas fa-map-marker-alt"></i> Colombia, Poayán</p>
+              <p><i class="fas fa-phone"></i> 3117865432</p>
+              <span class="status active">Activa</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn-sm">Ver Detalles</button>
+            </div>
+          </div>
+
+          <div class="card" onclick="showDetail(2)">
+            <div class="card-icon"><i class="fas fa-store"></i></div>
+            <div class="card-info">
+              <h3>Sucursal Norte</h3>
+              <p><i class="fas fa-map-marker-alt"></i> colombia, cali</p>
+              <p><i class="fas fa-phone"></i> 3214567856</p>
+              <span class="status active">Activa</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn-sm">Ver Detalles</button>
+            </div>
+          </div>
+
+          <div class="card" onclick="showDetail(3)">
+            <div class="card-icon"><i class="fas fa-store"></i></div>
+            <div class="card-info">
+              <h3>Sucursal Sur</h3>
+              <p><i class="fas fa-map-marker-alt"></i> colombia, bogota</p>
+              <p><i class="fas fa-phone"></i> 3119876543</p>
+              <span class="status inactive">Inactiva</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn-sm">Ver Detalles</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal de Detalle de Sucursal -->
+  <div id="detailModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeDetail()">&times;</span>
+      <h2>Detalle de Sucursal</h2>
+
+      <div class="branch-info">
+        <h3 id="modal-title">Sucursal Central</h3>
+        <p><strong>Dirección:</strong> <span id="modal-address">Av. Principal #123, CDMX</span></p>
+        <p><strong>Teléfono:</strong> <span id="modal-phone">+52 55 1234 5678</span></p>
+        <p><strong>Email:</strong> <span id="modal-email">central@empresa.com</span></p>
+        <p><strong>Horario:</strong> L-V 9:00 - 18:00 | Sábado 10:00 - 14:00</p>
+        <p><strong>Estado:</strong> <span id="modal-status" class="status active">Activa</span></p>
+      </div>
+
+      <!-- Productos Disponibles -->
+      <div class="products-section">
+        <h3>📦 Productos Disponibles</h3>
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Stock</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>Producto A</td>
+              <td>Electrónicos</td>
+              <td>25</td>
+              <td>$1,200.00</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Producto B</td>
+              <td>Hogar</td>
+              <td>8</td>
+              <td>$450.00</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Producto C</td>
+              <td>Oficina</td>
+              <td>15</td>
+              <td>$320.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Configuraciones (solo Admin) -->
+      <div id="adminSection" class="admin-section">
+        <h3>⚙️ Configuraciones Regionales</h3>
+        <button class="btn-warning">Editar Horario</button>
+        <button class="btn-warning">Asignar Productos</button>
+        <button class="btn-danger">Desactivar Sucursal</button>
+      </div>
+
+      <!-- Contacto -->
+      <div class="contact-section">
+        <button class="btn-outline"><i class="fas fa-envelope"></i> Contactar al Gerente</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simulación de vista de detalle
+    function showDetail(id) {
+      const data = {
+        1: { title: "Sucursal Central", address: "Av. Principal #123, CDMX", phone: "+52 55 1234 5678", email: "central@empresa.com", status: "Activa" },
+        2: { title: "Sucursal Norte", address: "Av. Tecnológico #456, Monterrey", phone: "+52 81 2345 6789", email: "norte@empresa.com", status: "Activa" },
+        3: { title: "Sucursal Sur", address: "Calle Sur #789, Guadalajara", phone: "+52 33 9876 5432", email: "sur@empresa.com", status: "Inactiva" }
+      };
+
+      const info = data[id];
+      document.getElementById("modal-title").textContent = info.title;
+      document.getElementById("modal-address").textContent = info.address;
+      document.getElementById("modal-phone").textContent = info.phone;
+      document.getElementById("modal-email").textContent = info.email;
+      document.getElementById("modal-status").textContent = info.status;
+      document.getElementById("modal-status").className = "status " + (info.status === "Activa" ? "active" : "inactive");
+
+      document.getElementById("detailModal").style.display = "flex";
+    }
+
+    function closeDetail() {
+      document.getElementById("detailModal").style.display = "none";
+    }
+
+    // Cerrar modal al hacer clic fuera
+    window.onclick = function(event) {
+      const modal = document.getElementById("detailModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
